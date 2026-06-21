@@ -1,0 +1,83 @@
+[
+  {
+    "name": "Lovely Runner",
+    "id": "lovely-runner",
+    "img_url": "https://www.viu.com/ott/viuscene/wp-content/uploads/2024/09/Back-in-Time-to-Save-Him-Lovely-Runners-Time-Travel-Romance-.jpg",
+    "rating": "9.8",
+    "description": "Im Sol travels back in time to prevent the tragic fate of her favorite star, Ryu Sun Jae.",
+    "cast": ["Kim Hye Yoon", "Byeon Woo Seok", "Song Geon Hee"],
+    "genre": ["Romantic Comedy", "Fantasy"],
+    "watch_url": "https://www.viki.com/tv/40466c-lovely-runner"
+  },
+  {
+    "name": "Crash Landing on You",
+    "id": "crash-landing-on-you",
+    "img_url": "https://cdn.dnaindia.com/sites/default/files/styles/full/public/2023/03/07/2577457-fotojet-68.jpg",
+    "rating": "9.7",
+    "description": "A South Korean heiress accidentally lands in North Korea and meets a soldier who helps her hide.",
+    "cast": ["Hyun Bin", "Son Ye Jin", "Seo Ji Hye"],
+    "genre": ["Romance", "Drama"],
+    "watch_url": "https://www.netflix.com/title/81159258"
+  },
+  {
+    "name": "Goblin",
+    "id": "goblin",
+    "img_url": "https://s.yimg.com/zb/imgv1/d84c838c-7bbd-3bf9-aedf-4daeed051c40/t_500x300",
+    "rating": "9.6",
+    "description": "An immortal goblin seeks a human bride to end his cursed life.",
+    "cast": ["Gong Yoo", "Kim Go Eun", "Lee Dong Wook"],
+    "genre": ["Fantasy", "Romance"],
+    "watch_url": "https://www.viki.com/tv/31706c-goblin"
+  },
+  {
+    "name": "Itaewon Class",
+    "id": "itaewon-class",
+    "img_url": "https://s.yimg.com/zb/imgv1/baee8c62-dfcc-36ea-9306-dcfb2e890588/t_500x300",
+    "rating": "9.5",
+    "description": "A determined ex-con builds a bar business in Itaewon while seeking revenge.",
+    "cast": ["Park Seo Joon", "Kim Da Mi", "Yoo Jae Myung"],
+    "genre": ["Drama", "Business"],
+    "watch_url": "https://www.netflix.com/title/81193309"
+  },
+  {
+    "name": "Vincenzo",
+    "id": "vincenzo",
+    "img_url": "https://s.yimg.com/zb/imgv1/b0428fd7-07bc-373a-9c97-68fac031ed20/t_500x300",
+    "rating": "9.4",
+    "description": "A Korean-Italian mafia lawyer returns to Korea and takes down corrupt conglomerates.",
+    "cast": ["Song Joong Ki", "Jeon Yeo Been", "Ok Taecyeon"],
+    "genre": ["Crime", "Dark Comedy"],
+    "watch_url": "https://www.netflix.com/title/81365087"
+  },
+  {
+    "name": "Extraordinary Attorney Woo",
+    "id": "attorney-woo",
+    "img_url": "https://s.yimg.com/zb/imgv1/ca74f8a8-b729-3c89-b927-bfeb1dfec5e3/t_500x300",
+    "rating": "9.3",
+    "description": "A brilliant lawyer on the autism spectrum navigates challenges in court and life.",
+    "cast": ["Park Eun Bin", "Kang Tae Oh", "Kang Ki Young"],
+    "genre": ["Legal", "Drama"],
+    "watch_url": "https://www.netflix.com/title/81518991"
+  },
+  {
+    "name": "My Demon",
+    "id": "my-demon",
+    "img_url": "https://s.yimg.com/zb/imgv1/d4ea874c-9459-3b6b-8bb2-359d70e32d9c/t_500x300",
+    "rating": "9.2",
+    "description": "A demon loses his powers and gets entangled with a cold heiress.",
+    "cast": ["Song Kang", "Kim Yoo Jung", "Lee Sang Yi"],
+    "genre": ["Fantasy", "Romance"],
+    "watch_url": "https://www.netflix.com/title/81716027"
+  },
+  {
+    "name": "The Glory",
+    "id": "the-glory",
+    "img_url": "https://assets.gadgets360cdn.com/pricee/assets/product/202212/The-Glory_1671428259.jpg",
+    "rating": "9.4",
+    "description": "A woman executes a long-planned revenge against her school bullies.",
+    "cast": ["Song Hye Kyo", "Lee Do Hyun", "Lim Ji Yeon"],
+    "genre": ["Thriller", "Drama"],
+    "watch_url": "https://www.netflix.com/title/81519223"
+  }
+  
+]
