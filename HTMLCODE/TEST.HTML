@@ -1,0 +1,1241 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>ProPrint ID Solutions | Premium Institutional Printing</title>
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Material Symbols -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#C41E3A",
+              secondary: "#D4AF37",
+              background: "#fff8f7",
+              "on-primary": "#ffffff",
+              surface: "#fff8f7",
+              "surface-container": "#ffe9e7",
+              "surface-container-low": "#fff0f0",
+              "surface-container-highest": "#fcdbd8",
+              "outline-variant": "#e7bdbb",
+              "on-surface": "#281716",
+              "on-surface-variant": "#5d3f3e",
+              "primary-container": "#C41E3A",
+              "on-primary-container": "#ffffff",
+            },
+            borderRadius: {
+              DEFAULT: "0.25rem",
+              lg: "0.5rem",
+              xl: "0.75rem",
+              card: "14px",
+              full: "9999px",
+            },
+            spacing: {
+              gutter: "16px",
+              margin: "24px",
+              xl: "32px",
+              sm: "8px",
+              md: "16px",
+              lg: "24px",
+              xs: "4px",
+              base: "8px",
+            },
+            fontFamily: {
+              sans: ["Montserrat", "sans-serif"],
+              "headline-lg": ["Montserrat", "sans-serif"],
+              "body-lg": ["Montserrat", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          "FILL" 0,
+          "wght" 400,
+          "GRAD" 0,
+          "opsz" 24;
+        vertical-align: middle;
+      }
+
+      /* Fabric Backgrounds */
+      .fabric-white {
+        background-color: #fff8f7;
+        background-image: radial-gradient(#e7bdbb 0.8px, transparent 0.8px);
+        background-size: 16px 16px;
+      }
+      .fabric-texture {
+        background-color: #c41e3a;
+        background-image: linear-gradient(
+          45deg,
+          rgba(255, 255, 255, 0.05) 25%,
+          transparent 25%,
+          transparent 50%,
+          rgba(255, 255, 255, 0.05) 50%,
+          rgba(255, 255, 255, 0.05) 75%,
+          transparent 75%,
+          transparent
+        );
+        background-size: 4px 4px;
+      }
+
+      /* Stitching Effects */
+      .stitch-border {
+        border: 3px dashed #d4af37;
+        border-radius: 14px;
+      }
+
+      .cross-stitch-corner::before,
+      .cross-stitch-corner::after {
+        content: "✕";
+        position: absolute;
+        color: #d4af37;
+        font-size: 18px;
+        font-weight: bold;
+        z-index: 30;
+      }
+      .cross-stitch-corner::before {
+        top: 12px;
+        left: 12px;
+      }
+      .cross-stitch-corner::after {
+        bottom: 12px;
+        right: 12px;
+      }
+
+      /* Banner Animations */
+      @keyframes bannerScroll {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-50%);
+        }
+      }
+      @keyframes bannerScrollReverse {
+        0% {
+          transform: translateX(-50%);
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+      .banner-container {
+        overflow: hidden;
+        white-space: nowrap;
+        background: #d4af37;
+        color: #281716;
+        padding: 8px 0;
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 14px;
+      }
+      .banner-content {
+        display: inline-block;
+        animation: bannerScroll 20s linear infinite;
+      }
+      .banner-content-reverse {
+        display: inline-block;
+        animation: bannerScrollReverse 20s linear infinite;
+      }
+
+      /* Component Animations */
+      @keyframes starPulse {
+        0%,
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+        50% {
+          transform: scale(1.2);
+          opacity: 0.7;
+        }
+      }
+      .star-separator {
+        animation: starPulse 2s infinite ease-in-out;
+        color: #d4af37;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0) rotate(-5deg);
+        }
+        50% {
+          transform: translateY(-15px) rotate(-2deg);
+        }
+      }
+      .float-id-card {
+        animation: float 4s ease-in-out infinite;
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(30px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .reveal.active {
+        animation: fadeInUp 0.8s forwards ease-out;
+      }
+      .reveal {
+        opacity: 0;
+      }
+
+      .wavy-divider {
+        width: 100%;
+        height: 40px;
+        background-repeat: repeat-x;
+        background-size: 80px 40px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='40' viewBox='0 0 80 40'%3E%3Cpath d='M0 20 Q 20 0, 40 20 T 80 20' fill='none' stroke='%23D4AF37' stroke-width='3' stroke-dasharray='6,4'/%3E%3C/svg%3E");
+      }
+
+      .glass-nav {
+        backdrop-filter: blur(8px);
+        background: rgba(255, 248, 247, 0.9);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-background text-on-surface selection:bg-secondary selection:text-on-surface overflow-x-hidden font-sans"
+  >
+    <!-- TopNavBar -->
+    <nav
+      class="docked full-width top-0 sticky z-50 glass-nav border-b border-outline-variant shadow-sm h-20"
+    >
+      <div
+        class="flex justify-between items-center w-full px-margin md:px-xl max-w-7xl mx-auto h-full"
+      >
+        <div class="font-bold text-2xl text-primary flex items-center gap-2">
+          <span class="material-symbols-outlined star-separator">stars</span>
+          ProPrint ID
+        </div>
+        <div class="hidden md:flex gap-md items-center">
+          <a
+            class="text-primary font-bold border-b-2 border-primary pb-1"
+            href="#"
+            >Services</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors"
+            href="#"
+            >About Us</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors"
+            href="#"
+            >Portfolio</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors"
+            href="#"
+            >Process</a
+          >
+          <a
+            class="text-on-surface-variant hover:text-primary transition-colors"
+            href="#"
+            >FAQ</a
+          >
+        </div>
+        <div class="flex items-center gap-sm">
+          <button
+            class="bg-primary text-on-primary px-md py-sm rounded-lg font-bold hover:bg-opacity-90 active:scale-95 duration-150 transition-all shadow-md"
+          >
+            Get Quote
+          </button>
+        </div>
+      </div>
+    </nav>
+    <!-- Hero Section -->
+    <section
+      class="relative min-h-[800px] flex items-center overflow-hidden py-xl px-margin md:px-xl fabric-texture cross-stitch-corner"
+    >
+      <div class="absolute inset-0 z-0">
+        <div
+          class="absolute inset-0 bg-gradient-to-r from-primary via-primary/80 to-transparent z-10"
+        ></div>
+        <img
+          alt="Printing technology"
+          class="w-full h-full object-cover opacity-30"
+          src="https://lh3.googleusercontent.com/aida-public/AB6AXuCE5FsDsH47jewIlRBaW_slyKuJ_wCVr46iZQQ9XbZeN-Q_jTk5W2SBsWRx3LLu5ijIMcGTGtY3PI3qY_BvBYwIjIcEeP-Q5w6UZKaxVeJVaJ80vJjyFNrcmMDPWZWcfnHsh7S8UsAnQSKmhw3RnxNv_ANqG1wWqLVJHtTNNlhJCgpC23PwjWZy9-RtvF2fJ4AUuT3lv4auIMupqxC2bHGRgd8LnshnqvNPGDaOI16MgQ0Iq2RN27DJHcrXcqHsqfG7-ycWn5j_5ulu"
+        />
+      </div>
+      <div
+        class="relative z-20 max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-2 gap-lg items-center text-on-primary"
+      >
+        <div class="reveal active">
+          <span
+            class="text-secondary font-bold tracking-widest uppercase mb-base block"
+            >ISO 9001:2015 Certified Premium Solutions</span
+          >
+          <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-md">
+            Stitched with Perfection,
+            <span class="text-secondary">Printed for Life.</span>
+          </h1>
+          <p class="text-lg opacity-90 mb-lg max-w-xl">
+            Professional, durable, and custom-designed ID cards, lanyards, and
+            awards for schools and corporate clients across India.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-md">
+            <button
+              class="bg-secondary text-on-surface px-lg py-md rounded-lg font-bold hover:shadow-xl transition-all flex items-center justify-center gap-sm"
+            >
+              Get a Free Quote
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </button>
+            <button
+              class="border-2 border-secondary text-secondary px-lg py-md rounded-lg font-bold hover:bg-secondary hover:text-on-surface transition-all flex items-center justify-center gap-sm"
+            >
+              <span class="material-symbols-outlined">chat</span> WhatsApp Us
+            </button>
+          </div>
+        </div>
+        <div
+          class="hidden lg:block relative reveal active"
+          style="animation-delay: 200ms"
+        >
+          <div
+            class="float-id-card relative w-[400px] h-[250px] bg-white rounded-card stitch-border p-md text-on-surface shadow-2xl overflow-hidden"
+          >
+            <div class="flex gap-md h-full">
+              <div
+                class="w-1/3 bg-surface-container rounded-lg overflow-hidden border border-outline-variant"
+              >
+                <img
+                  alt="Student Portrait"
+                  class="w-full h-full object-cover"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVjiFmeodJk1HXj1CY-xThdWCcbNpQaYFkrfgjYenXEqFU-zkdzBQTfdUztlWttzMvyps9yuZ0Bq9xMjia_PasOSOfOhYz07q3W03gxwWpTCSZIiionUbqEmNhdKdQUyto9UELxg9woErH1Ql_JoGNDX4D0SF5RBcoeYl4mlckKM9P1-d3nAMiO4gyLCuwpvbvGGOtaoOqM4xsb8FlRGW_rBCTDQTlWm1kCkfWcEiC9o12vttmQ4QY_EIiDai0kKYCC77WEPTRORZB"
+                />
+              </div>
+              <div class="flex-1 flex flex-col justify-between">
+                <div>
+                  <div class="font-bold text-primary text-xl">ARJUN MEHTA</div>
+                  <div class="text-sm opacity-70">Class 10-A • Roll: 2401</div>
+                </div>
+                <div class="pt-base border-t border-outline-variant">
+                  <div class="text-[10px] uppercase font-bold text-primary">
+                    St. Xavier's International School
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Product Categories Section -->
+    <!-- Product Categories Section -->
+    <section class="py-xl fabric-white relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-margin md:px-xl">
+        <div class="text-center mb-lg reveal active">
+          <h2 class="text-4xl font-bold text-primary mb-base">
+            Our Specialized Categories
+          </h2>
+          <div class="wavy-divider mx-auto max-w-[200px]"></div>
+        </div>
+        <div class="relative group">
+          <!-- Navigation Buttons -->
+          <button
+            class="absolute left-0 top-1/2 -translate-y-1/2 z-30 bg-primary text-on-primary w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-all opacity-0 group-hover:opacity-100 -translate-x-1/2 md:translate-x-0"
+            id="prevBtn"
+            style="opacity: 0"
+          >
+            <span class="material-symbols-outlined">chevron_left</span>
+          </button>
+          <button
+            class="absolute right-0 top-1/2 -translate-y-1/2 z-30 bg-primary text-on-primary w-10 h-10 rounded-full flex items-center justify-center shadow-lg hover:scale-110 active:scale-95 transition-all opacity-0 group-hover:opacity-100 translate-x-1/2 md:translate-x-0"
+            id="nextBtn"
+            style="opacity: 0"
+          >
+            <span class="material-symbols-outlined">chevron_right</span>
+          </button>
+          <!-- Carousel Container -->
+          <div
+            class="flex overflow-x-auto gap-md md:gap-xl pb-md scroll-smooth no-scrollbar snap-x snap-mandatory px-4"
+            id="category-carousel"
+          >
+            <!-- 1. Premium T-Shirts -->
+            <div class="flex-none w-48 snap-center reveal active">
+              <div class="flex flex-col items-center group">
+                <div
+                  class="w-40 h-40 rounded-full stitch-border-circle flex items-center justify-center mb-md transition-all group-hover:scale-105 group-hover:shadow-xl bg-[#E3F2FD] overflow-hidden relative"
+                >
+                  <img
+                    alt="Premium T-Shirts"
+                    class="w-2/3 h-2/3 object-contain"
+                    src="https://plus.unsplash.com/premium_photo-1718913931807-4da5b5dd27fa?q=80&w=1172&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                  />
+                  <span
+                    class="material-symbols-outlined absolute inset-0 flex items-center justify-center text-4xl text-primary/20"
+                    >apparel</span
+                  >
+                </div>
+                <span class="font-bold text-on-surface text-center px-sm"
+                  >Premium T-Shirts</span
+                >
+              </div>
+            </div>
+
+            <!-- 2. Awards & Trophies -->
+            <div class="flex-none w-48 snap-center reveal active">
+              <div class="flex flex-col items-center group">
+                <div
+                  class="w-40 h-40 rounded-full stitch-border-circle flex items-center justify-center mb-md transition-all group-hover:scale-105 group-hover:shadow-xl bg-[#FCE4EC] overflow-hidden"
+                >
+                  <img
+                    alt="Awards &amp; Trophies"
+                    class="w-full h-full object-cover scale-75"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_SQ9sR1UX4IVVZ28B3Kz54d3jBI8ZKVx14doeHxsL87CZVtSeqnEhXPEtRd8WoJeBcKYBW8ikePtc04ba0ssX8wn2iF0LZc5xxKBDLcjlSXcNtQzgv58MSna8mQTVms29MYRaIcgdXbm5NHX9Yp7I2aBNBj-Qd9TqgccerLolBjjTd1Kz4ktW08BOBB_4r43FlAsqkfVWH4QBDx4-9AoPIprad58s529Vp1J1HfESpRHqi9OohPGFqiL7KSAKnzKO9gncHVRLnR2Y"
+                  />
+                </div>
+                <span class="font-bold text-on-surface text-center px-sm"
+                  >Awards &amp; Trophies</span
+                >
+              </div>
+            </div>
+            <!-- 3. Institutional ID Cards -->
+            <div class="flex-none w-48 snap-center reveal active">
+              <div class="flex flex-col items-center group">
+                <div
+                  class="w-40 h-40 rounded-full stitch-border-circle flex items-center justify-center mb-md transition-all group-hover:scale-105 group-hover:shadow-xl bg-[#E8F5E9] overflow-hidden"
+                >
+                  <img
+                    alt="Institutional ID Cards"
+                    class="w-full h-full object-cover scale-75"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuArCaXXO6CO3HItXqY3tQIc69N9qH1cyJhbKbpwotOQsHd_zdUwiAfQl12otu5QY5GK_EbjpXeD4M9hxHfJpTAa9O0bIXckDFfLSxAfcgVd3A7K2hYkmpsH_fFembz8Pr4vgYmT_zEaIbHrrnhKPtrJ4qEtyPqyn3-1f39Sdpj9i2IS4L3QTu6DqGwkGLVn2DqM5mbYT-n8SwCGC3gu4c45iNBeAmGWyZqVI8TKEzvYvbeyxkI0dDGvXZT-zC4g0hNFEOdgfS2ruyLH"
+                  />
+                </div>
+                <span class="font-bold text-on-surface text-center px-sm"
+                  >Institutional ID Cards</span
+                >
+              </div>
+            </div>
+            <!-- 4. Corporate Uniforms -->
+            <div class="flex-none w-48 snap-center reveal active">
+              <div class="flex flex-col items-center group">
+                <div
+                  class="w-40 h-40 rounded-full stitch-border-circle flex items-center justify-center mb-md transition-all group-hover:scale-105 group-hover:shadow-xl bg-[#FFFDE7] overflow-hidden"
+                >
+                  <span
+                    class="material-symbols-outlined text-5xl text-primary/30"
+                    >laundry</span
+                  >
+                </div>
+                <span class="font-bold text-on-surface text-center px-sm"
+                  >Corporate Uniforms</span
+                >
+              </div>
+            </div>
+            <!-- 5. Custom Lanyards -->
+            <div class="flex-none w-48 snap-center reveal active">
+              <div class="flex flex-col items-center group">
+                <div
+                  class="w-40 h-40 rounded-full stitch-border-circle flex items-center justify-center mb-md transition-all group-hover:scale-105 group-hover:shadow-xl bg-[#F3E5F5] overflow-hidden"
+                >
+                  <img
+                    alt="Custom Lanyards"
+                    class="w-full h-full object-cover scale-75"
+                    src="https://lh3.googleusercontent.com/aida/AP1WRLu5SCDPj2YGETo5i7ye2Z9ThjnUyr72BGnFTR7VaJDNZqgNYJuPm70z8_kjXfZRHyPORfEa3rnZ3MMGlo5MHQdAl-8PRFFHn7T2VR34wS8o4o1tLKsUBDllsRQoR49yXkuyQ0VNQaYpa46lxJL3ipMM_D4yn892BOu3w9geVIzzpxJ8AG9DKNn3mWcUX7m5I407581c0Dn9H_vORM-nV17D6wokHOsJ2rXF7ALSwOWZw_9J4aDRZv4XkNIO"
+                  />
+                </div>
+                <span class="font-bold text-on-surface text-center px-sm"
+                  >Custom Lanyards</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Banner 1: Left to Right -->
+    <div class="banner-container border-y border-secondary">
+      <div class="banner-content">
+        <span class="px-md">School ID Cards Starting ₹8/card</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+        <span class="px-md">Free Custom Design</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+        <span class="px-md">Pan-India Delivery</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+        <span class="px-md">WhatsApp Us for Instant Quote</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+        <!-- Repeat for seamless scroll -->
+        <span class="px-md">School ID Cards Starting ₹8/card</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+        <span class="px-md">Free Custom Design</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+        <span class="px-md">Pan-India Delivery</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+        <span class="px-md">WhatsApp Us for Instant Quote</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+      </div>
+    </div>
+    <!-- Stats Section -->
+    <section class="bg-primary py-lg border-b border-secondary/30">
+      <div class="max-w-7xl mx-auto px-margin md:px-xl">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-md text-center">
+          <div class="reveal active">
+            <div class="text-4xl font-bold text-secondary">500+</div>
+            <div
+              class="text-on-primary opacity-80 uppercase tracking-widest text-xs"
+            >
+              Schools Served
+            </div>
+          </div>
+          <div class="reveal active">
+            <div class="text-4xl font-bold text-secondary">1M+</div>
+            <div
+              class="text-on-primary opacity-80 uppercase tracking-widest text-xs"
+            >
+              Products Delivered
+            </div>
+          </div>
+          <div class="reveal active">
+            <div class="text-4xl font-bold text-secondary">15+</div>
+            <div
+              class="text-on-primary opacity-80 uppercase tracking-widest text-xs"
+            >
+              Years Experience
+            </div>
+          </div>
+          <div class="reveal active">
+            <div class="text-4xl font-bold text-secondary">100%</div>
+            <div
+              class="text-on-primary opacity-80 uppercase tracking-widest text-xs"
+            >
+              Satisfaction
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="wavy-divider"></div>
+    <!--Product Section-->
+    <!-- <div class="wavy-divider"></div> -->
+    <section class="py-xl aida-cloth">
+      <div class="max-w-7xl mx-auto px-margin md:px-xl">
+        <div class="text-center mb-xl reveal active">
+          <h2 class="text-4xl font-bold text-primary mb-base">
+            Our Signature Products
+          </h2>
+          <div class="wavy-divider mx-auto max-w-[200px]"></div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-lg">
+          <!-- Product 1 -->
+          <div
+            class="group bg-white flex flex-col stitch-border rounded-card overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300 reveal active"
+          >
+            <div class="h-64 overflow-hidden">
+              <img
+                alt="Premium Staff ID Cards"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida/AP1WRLvTOowToyHqyo7lbhxOyd_9U73suQF7AB57c2KxHtowNvivKR_aKsM1FuP3KZ6X6r2lICWGKk_NKnNIAJJzZG-mvbS6kNbtQhmcaVGsekijU96V6hS_AmD4WGR9oC_x93zCcx_nmHkc7ItrcSX7ufeZkEUr_unMOucwFkD2YIbRbw4zsPEg72s6oj5o2MYZYT4T4v2rIYZRMCqAQ7iZtpVyqgLUo6_ErjxT3r77DgBDI1sVRafuxkJGL4E6"
+              />
+            </div>
+            <div class="p-lg flex flex-col flex-1">
+              <h3 class="text-xl font-bold text-primary mb-xs">
+                Premium Staff ID Cards
+              </h3>
+              <p class="text-on-surface-variant text-sm mb-md">
+                Durable PVC with high-res printing.
+              </p>
+              <div class="mt-auto">
+                <div class="text-2xl font-bold text-brand-gold mb-md">
+                  ₹45.00
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                  <button
+                    class="border border-primary text-primary px-2 py-sm rounded-lg font-bold text-sm hover:bg-primary/10 transition-all"
+                  >
+                    Add to Cart
+                  </button>
+                  <button
+                    class="bg-primary text-on-primary px-2 py-sm rounded-lg font-bold text-sm hover:opacity-90 active:scale-95 transition-all shadow-md"
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product 2 -->
+          <div
+            class="group bg-white flex flex-col stitch-border rounded-card overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300 reveal active"
+          >
+            <div class="h-64 overflow-hidden">
+              <img
+                alt="Corporate Polo Shirts"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida/AP1WRLvTHoEgO3-gEXS_C6vA1FhyGanAN51LY4nZPLjr_nIYThpzp0TtIiXY_Uggouco-VhM45kUCgcdqtYMVv7JKmdkOF3CkaWHyk063D8J4kWoSpBoKl4cJXlsjxvkUHsHLcIX0r865A-jaY_9Je0yQBhAKMb_jMhTBjwpLpv2tRM3V6oE0PzXJgb8SDnZ0YBTH1oUOkCfcaSrkqA7FSAjso2pxtXbWsIAQT8biPO4lyBHYaqciqx3KP87KFQ"
+              />
+            </div>
+            <div class="p-lg flex flex-col flex-1">
+              <h3 class="text-xl font-bold text-primary mb-xs">
+                Corporate Polo Shirts
+              </h3>
+              <p class="text-on-surface-variant text-sm mb-md">
+                Premium cotton with custom embroidery.
+              </p>
+              <div class="mt-auto">
+                <div class="text-2xl font-bold text-brand-gold mb-md">
+                  ₹599.00
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                  <button
+                    class="border border-primary text-primary px-2 py-sm rounded-lg font-bold text-sm hover:bg-primary/10 transition-all"
+                  >
+                    Add to Cart
+                  </button>
+                  <button
+                    class="bg-primary text-on-primary px-2 py-sm rounded-lg font-bold text-sm hover:opacity-90 active:scale-95 transition-all shadow-md"
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product 3 -->
+          <div
+            class="group bg-white flex flex-col stitch-border rounded-card overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300 reveal active"
+          >
+            <div class="h-64 overflow-hidden">
+              <img
+                alt="Crystal Excellence Award"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida/AP1WRLuZC9Etm7Vcm1kPBkApxgWY699skP3Tt03gkgmEFrqsxccsLTSgy2pjOoTZ8O1LbAY6XD5m7tWrQSHPwTSz-SRc17klsE8F4tKxKHEsgcCXq1u6yO3lwcmRgaRIsgD--7enW7wLEwp8ht-sxM9SWEwUkO1jtnLLWUPe3ZxQKRu_XNc8H8j-eHFdDwUhivzdvBKrZ6BZsRa4xKmfWaEsfThYCBurmh5X1aseL9goOEEuQ36SAppDXRBO74u8"
+              />
+            </div>
+            <div class="p-lg flex flex-col flex-1">
+              <h3 class="text-xl font-bold text-primary mb-xs">
+                Crystal Excellence Award
+              </h3>
+              <p class="text-on-surface-variant text-sm mb-md">
+                Hand-cut acrylic with gold-plated medal.
+              </p>
+              <div class="mt-auto">
+                <div class="text-2xl font-bold text-brand-gold mb-md">
+                  ₹1,250.00
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                  <button
+                    class="border border-primary text-primary px-2 py-sm rounded-lg font-bold text-sm hover:bg-primary/10 transition-all"
+                  >
+                    Add to Cart
+                  </button>
+                  <button
+                    class="bg-primary text-on-primary px-2 py-sm rounded-lg font-bold text-sm hover:opacity-90 active:scale-95 transition-all shadow-md"
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Product 4 -->
+          <div
+            class="group bg-white flex flex-col stitch-border rounded-card overflow-hidden hover:-translate-y-1 hover:shadow-xl transition-all duration-300 reveal active"
+          >
+            <div class="h-64 overflow-hidden">
+              <img
+                alt="Luxury Business Cards"
+                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                src="https://lh3.googleusercontent.com/aida/AP1WRLupQO1_woAwEINAkiRoQq89Q2Cmaq8qJqpQDRxEsW-doluSK8C3Qsu48d2rDsovF4mMRhJKanvG_n7QXda-tDqPQAGWid7D2IpS3817NXyLDIROc-QwI1h_5ttbUnoS1CbNy38ArF8rqFjTqWG5nu8fEKLloKGr0nkr12fh_uiVptc6dkBjWqDqmJC91DiFMfJ6cewsJsnLEykEg7UE2dN7a-3P6ImxbKWR3cdAkSLPg7SFBlM8HgXskmM"
+              />
+            </div>
+            <div class="p-lg flex flex-col flex-1">
+              <h3 class="text-xl font-bold text-primary mb-xs">
+                Luxury Business Cards
+              </h3>
+              <p class="text-on-surface-variant text-sm mb-md">
+                Matte finish with gold foil stitching.
+              </p>
+              <div class="mt-auto">
+                <div class="text-2xl font-bold text-brand-gold mb-md">
+                  ₹499.00
+                  <span class="text-xs font-normal text-on-surface-variant"
+                    >(Pack of 100)</span
+                  >
+                </div>
+                <div class="grid grid-cols-2 gap-2">
+                  <button
+                    class="border border-primary text-primary px-2 py-sm rounded-lg font-bold text-sm hover:bg-primary/10 transition-all"
+                  >
+                    Add to Cart
+                  </button>
+                  <button
+                    class="bg-primary text-on-primary px-2 py-sm rounded-lg font-bold text-sm hover:opacity-90 active:scale-95 transition-all shadow-md"
+                  >
+                    Buy Now
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Services Grid -->
+    <section class="py-xl fabric-white">
+      <div class="max-w-7xl mx-auto px-margin md:px-xl">
+        <div class="text-center mb-xl reveal active">
+          <h2 class="text-4xl font-bold text-primary mb-base">
+            Our Core Services
+          </h2>
+          <div class="w-24 h-1 bg-secondary mx-auto"></div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-lg">
+          <!-- Service Card 1 -->
+          <div
+            class="group bg-white p-lg stitch-border hover:shadow-2xl transition-all duration-300 reveal active"
+          >
+            <div
+              class="w-12 h-12 bg-primary text-on-primary rounded-lg flex items-center justify-center mb-md group-hover:scale-110 transition-transform"
+            >
+              <span class="material-symbols-outlined">badge</span>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-sm">
+              School ID Cards
+            </h3>
+            <p class="text-on-surface-variant text-sm mb-md">
+              High-definition, durable PVC cards with customizable layouts.
+            </p>
+            <a
+              class="text-secondary font-bold flex items-center gap-xs text-sm"
+              href="#"
+              >Learn More
+              <span class="material-symbols-outlined text-sm"
+                >open_in_new</span
+              ></a
+            >
+          </div>
+          <!-- Service Card 2 -->
+          <div
+            class="group bg-white p-lg stitch-border hover:shadow-2xl transition-all duration-300 reveal active"
+          >
+            <div
+              class="w-12 h-12 bg-primary text-on-primary rounded-lg flex items-center justify-center mb-md group-hover:scale-110 transition-transform"
+            >
+              <span class="material-symbols-outlined">smart_alarm</span>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-sm">Smart Cards</h3>
+            <p class="text-on-surface-variant text-sm mb-md">
+              RFID and NFC integrated cards for modern systems.
+            </p>
+            <a
+              class="text-secondary font-bold flex items-center gap-xs text-sm"
+              href="#"
+              >Learn More
+              <span class="material-symbols-outlined text-sm"
+                >open_in_new</span
+              ></a
+            >
+          </div>
+          <!-- Service Card 3 -->
+          <div
+            class="group bg-white p-lg stitch-border hover:shadow-2xl transition-all duration-300 reveal active"
+          >
+            <div
+              class="w-12 h-12 bg-primary text-on-primary rounded-lg flex items-center justify-center mb-md group-hover:scale-110 transition-transform"
+            >
+              <span class="material-symbols-outlined">identity_platform</span>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-sm">
+              Custom Lanyards
+            </h3>
+            <p class="text-on-surface-variant text-sm mb-md">
+              Premium satin lanyards with multi-color logo printing.
+            </p>
+            <a
+              class="text-secondary font-bold flex items-center gap-xs text-sm"
+              href="#"
+              >Learn More
+              <span class="material-symbols-outlined text-sm"
+                >open_in_new</span
+              ></a
+            >
+          </div>
+          <!-- Service Card 4 -->
+          <div
+            class="group bg-white p-lg stitch-border hover:shadow-2xl transition-all duration-300 reveal active"
+          >
+            <div
+              class="w-12 h-12 bg-primary text-on-primary rounded-lg flex items-center justify-center mb-md group-hover:scale-110 transition-transform"
+            >
+              <span class="material-symbols-outlined">military_tech</span>
+            </div>
+            <h3 class="text-xl font-bold text-primary mb-sm">
+              Trophy Collection
+            </h3>
+            <p class="text-on-surface-variant text-sm mb-md">
+              Exquisite acrylic and metal trophies for academic excellence.
+            </p>
+            <a
+              class="text-secondary font-bold flex items-center gap-xs text-sm"
+              href="#"
+              >Learn More
+              <span class="material-symbols-outlined text-sm"
+                >open_in_new</span
+              ></a
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Banner 2: Right to Left -->
+    <div class="banner-container border-y border-secondary">
+      <div class="banner-content-reverse">
+        <span class="px-md">ISO 9001:2015 Certified</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+        <span class="px-md">Premium Quality Guaranteed</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+        <span class="px-md">Over 500 Institutions Served</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+        <span class="px-md">Bulk Pricing Available</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+        <!-- Repeat -->
+        <span class="px-md">ISO 9001:2015 Certified</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+        <span class="px-md">Premium Quality Guaranteed</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+        <span class="px-md">Over 500 Institutions Served</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+        <span class="px-md">Bulk Pricing Available</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+      </div>
+    </div>
+    <div class="wavy-divider"></div>
+    <!-- Why Choose Us -->
+    <section class="py-xl bg-surface-container-low fabric-white">
+      <div
+        class="max-w-7xl mx-auto px-margin md:px-xl grid grid-cols-1 lg:grid-cols-2 gap-xl items-center"
+      >
+        <div class="reveal active">
+          <h2 class="text-4xl font-bold text-primary mb-md">
+            Why Institutions Trust Us
+          </h2>
+          <p class="text-lg text-on-surface-variant mb-lg">
+            We combine traditional craftsmanship with modern printing technology
+            to deliver products that represent your institution's prestige.
+          </p>
+          <div class="space-y-md">
+            <div class="flex gap-md items-start group">
+              <div
+                class="text-secondary group-hover:scale-125 transition-transform"
+              >
+                <span class="material-symbols-outlined text-3xl"
+                  >workspace_premium</span
+                >
+              </div>
+              <div>
+                <h4 class="font-bold text-primary">Premium Material</h4>
+                <p class="text-on-surface-variant text-sm">
+                  High-grade PVC and industrial-strength dyes for a long-lasting
+                  finish.
+                </p>
+              </div>
+            </div>
+            <div class="flex gap-md items-start group">
+              <div
+                class="text-secondary group-hover:scale-125 transition-transform"
+              >
+                <span class="material-symbols-outlined text-3xl">bolt</span>
+              </div>
+              <div>
+                <h4 class="font-bold text-primary">Fast Production</h4>
+                <p class="text-on-surface-variant text-sm">
+                  Automated lines capable of delivering bulk orders in record
+                  time.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative reveal active">
+          <div
+            class="aspect-video rounded-card stitch-border overflow-hidden shadow-2xl bg-white"
+          >
+            <img
+              alt="Quality Control"
+              class="w-full h-full object-cover"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAXSiXrprLB7RJFlosI2JtekV3r4_uy99pfbZbMHv5HEzRglG1fphIBOEZZPF2iwY7l_R5slPco_wFksxdN_1kXFLpN2qn1b3zmXKcNeIhtuDRH0kT4oAc4kSetY5OwagXKAObS9qFzGMFxP3n2UfyfUkvEeP2ch6CAxf5PwHf0L_KBDPMbkCaDpz4-QK8t-DjQfXqsc5wZK4iliux_mLm02wCq03TjdPdxhXzI1imNgvQ9o4Hr2EpXJV3Q73s4I6Zdla5BR-FpzViT"
+            />
+          </div>
+          <div
+            class="absolute -bottom-6 -right-6 bg-secondary p-md rounded-lg text-on-surface font-bold shadow-lg"
+          >
+            15+ YEARS OF TRUST
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Banner 3: Left to Right -->
+    <div class="banner-container border-y border-secondary">
+      <div class="banner-content">
+        <span class="px-md">Doorstep Delivery Pan-India</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+        <span class="px-md">Dedicated Support Team</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+        <span class="px-md">Sample Kits Available</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+        <span class="px-md">Trust of 1M+ Users</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+        <!-- Repeat -->
+        <span class="px-md">Doorstep Delivery Pan-India</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+        <span class="px-md">Dedicated Support Team</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+        <span class="px-md">Sample Kits Available</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+        <span class="px-md">Trust of 1M+ Users</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+      </div>
+    </div>
+    <div class="wavy-divider"></div>
+    <!-- Product Showcase -->
+    <section class="py-xl fabric-white">
+      <div class="max-w-7xl mx-auto px-margin md:px-xl">
+        <h2
+          class="text-4xl font-bold text-primary mb-xl text-center reveal active"
+        >
+          Our Signature Products
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-lg">
+          <div
+            class="md:col-span-2 group relative stitch-border rounded-card overflow-hidden h-[400px] reveal active"
+          >
+            <img
+              alt="ID cards"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUoolm7wbeNsp02lPN6OuJtj4fOn2I-Km19hZWBHvbhGNQcz-ma0jKHTcKQbixkyaPDxrCGAQI2VJnhX-eZYLiNhBW9VlVAO_PKgpVzx1e0IKQPdIQrF9KFVA9s5qJX_wvtQWwLFKca-r4Xz40uA9Stn_ZjXZcXHSqe5_zEdidq1Ix11gZY9yl6tXT-yJoUfI81ou30PrPbQmPyZNWH3Ym9_wTqJHtcFRWaCVKCi1yXTn4B2vu7rnBdaZklPZ0nyirdJm7QUq_Mvwe"
+            />
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent flex items-end p-lg"
+            >
+              <h3 class="text-2xl font-bold text-white">
+                Institutional ID Solutions
+              </h3>
+            </div>
+          </div>
+          <div class="space-y-lg">
+            <div
+              class="group relative stitch-border rounded-card overflow-hidden h-[188px] reveal active"
+            >
+              <img
+                alt="Awards"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_SQ9sR1UX4IVVZ28B3Kz54d3jBI8ZKVx14doeHxsL87CZVtSeqnEhXPEtRd8WoJeBcKYBW8ikePtc04ba0ssX8wn2iF0LZc5xxKBDLcjlSXcNtQzgv58MSna8mQTVms29MYRaIcgdXbm5NHX9Yp7I2aBNBj-Qd9TqgccerLolBjjTd1Kz4ktW08BOBB_4r43FlAsqkfVWH4QBDx4-9AoPIprad58s529Vp1J1HfESpRHqi9OohPGFqiL7KSAKnzKO9gncHVRLnR2Y"
+              />
+              <div
+                class="absolute inset-0 bg-primary/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                <span class="text-white font-bold">Acrylic Awards</span>
+              </div>
+            </div>
+            <div
+              class="group relative stitch-border rounded-card overflow-hidden h-[188px] reveal active"
+            >
+              <img
+                alt="Cards"
+                class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuArCaXXO6CO3HItXqY3tQIc69N9qH1cyJhbKbpwotOQsHd_zdUwiAfQl12otu5QY5GK_EbjpXeD4M9hxHfJpTAa9O0bIXckDFfLSxAfcgVd3A7K2hYkmpsH_fFembz8Pr4vgYmT_zEaIbHrrnhKPtrJ4qEtyPqyn3-1f39Sdpj9i2IS4L3QTu6DqGwkGLVn2DqM5mbYT-n8SwCGC3gu4c45iNBeAmGWyZqVI8TKEzvYvbeyxkI0dDGvXZT-zC4g0hNFEOdgfS2ruyLH"
+              />
+              <div
+                class="absolute inset-0 bg-primary/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity"
+              >
+                <span class="text-white font-bold">Visiting Cards</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Bulk Orders CTA -->
+    <section class="py-xl fabric-texture cross-stitch-corner relative">
+      <div
+        class="max-w-7xl mx-auto px-margin md:px-xl text-center text-on-primary"
+      >
+        <h2 class="text-4xl font-bold mb-md reveal active">
+          Planning a Bulk Order?
+        </h2>
+        <p class="text-lg opacity-90 mb-lg max-w-2xl mx-auto reveal active">
+          Specialized pricing for orders above 500 units. Custom designs,
+          doorstep delivery, and dedicated account management.
+        </p>
+        <button
+          class="bg-secondary text-on-surface px-xl py-md rounded-lg font-bold hover:scale-105 transition-all shadow-xl reveal active"
+        >
+          Request Bulk Pricing
+        </button>
+      </div>
+    </section>
+    <!-- Banner 4: Right to Left -->
+    <div class="banner-container border-y border-secondary">
+      <div class="banner-content-reverse">
+        <span class="px-md">High-Resolution Printing</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+        <span class="px-md">Eco-Friendly Inks</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+        <span class="px-md">Durable PVC Stock</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+        <span class="px-md">Anti-Scratch Coating</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+        <!-- Repeat -->
+        <span class="px-md">High-Resolution Printing</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+        <span class="px-md">Eco-Friendly Inks</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+        <span class="px-md">Durable PVC Stock</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+        <span class="px-md">Anti-Scratch Coating</span>
+        <span class="material-symbols-outlined text-sm">star</span>
+      </div>
+    </div>
+    <!-- Process -->
+    <section class="py-xl fabric-white">
+      <div class="max-w-7xl mx-auto px-margin md:px-xl">
+        <h2
+          class="text-4xl font-bold text-primary mb-xl text-center reveal active"
+        >
+          Our Process
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-lg">
+          <div class="text-center reveal active">
+            <div
+              class="w-16 h-16 border-4 border-secondary text-primary rounded-full flex items-center justify-center mx-auto mb-md font-bold text-2xl bg-white shadow-md"
+            >
+              1
+            </div>
+            <h4 class="font-bold text-primary">Consult</h4>
+            <p class="text-on-surface-variant text-sm">
+              Share your logos and requirements.
+            </p>
+          </div>
+          <div class="text-center reveal active">
+            <div
+              class="w-16 h-16 border-4 border-secondary text-primary rounded-full flex items-center justify-center mx-auto mb-md font-bold text-2xl bg-white shadow-md"
+            >
+              2
+            </div>
+            <h4 class="font-bold text-primary">Design</h4>
+            <p class="text-on-surface-variant text-sm">
+              Review digital proofs from our designers.
+            </p>
+          </div>
+          <div class="text-center reveal active">
+            <div
+              class="w-16 h-16 border-4 border-secondary text-primary rounded-full flex items-center justify-center mx-auto mb-md font-bold text-2xl bg-white shadow-md"
+            >
+              3
+            </div>
+            <h4 class="font-bold text-primary">Print</h4>
+            <p class="text-on-surface-variant text-sm">
+              Precision printing with quality checks.
+            </p>
+          </div>
+          <div class="text-center reveal active">
+            <div
+              class="w-16 h-16 border-4 border-secondary text-primary rounded-full flex items-center justify-center mx-auto mb-md font-bold text-2xl bg-white shadow-md"
+            >
+              4
+            </div>
+            <h4 class="font-bold text-primary">Deliver</h4>
+            <p class="text-on-surface-variant text-sm">
+              Securely packed doorstep delivery.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="wavy-divider"></div>
+    <!-- Contact -->
+    <section class="py-xl fabric-white" id="contact">
+      <div
+        class="max-w-7xl mx-auto px-margin md:px-xl grid grid-cols-1 lg:grid-cols-2 gap-xl"
+      >
+        <div class="reveal active">
+          <h2 class="text-4xl font-bold text-primary mb-md">Get in Touch</h2>
+          <p class="text-lg text-on-surface-variant mb-lg">
+            Our expert team is ready to assist with your institutional needs.
+          </p>
+          <div class="space-y-lg">
+            <div class="flex items-center gap-md">
+              <div
+                class="w-12 h-12 bg-white stitch-border rounded-full flex items-center justify-center text-primary shadow-sm"
+              >
+                <span class="material-symbols-outlined">location_on</span>
+              </div>
+              <div>
+                <div class="font-bold text-primary">Head Office</div>
+                <div class="text-on-surface-variant text-sm">
+                  Plot No. 42, Industrial Area, Phase II, New Delhi
+                </div>
+              </div>
+            </div>
+            <div class="flex items-center gap-md">
+              <div
+                class="w-12 h-12 bg-white stitch-border rounded-full flex items-center justify-center text-primary shadow-sm"
+              >
+                <span class="material-symbols-outlined">call</span>
+              </div>
+              <div>
+                <div class="font-bold text-primary">Contact</div>
+                <div class="text-on-surface-variant text-sm">
+                  +91 98765 43210
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="bg-white p-lg stitch-border shadow-2xl reveal active">
+          <h3 class="text-2xl font-bold text-primary mb-lg">Request a Quote</h3>
+          <form class="space-y-md">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-md">
+              <input
+                class="w-full px-md py-sm border border-outline-variant rounded-lg focus:border-secondary outline-none bg-surface"
+                placeholder="Your Name"
+                type="text"
+              />
+              <input
+                class="w-full px-md py-sm border border-outline-variant rounded-lg focus:border-secondary outline-none bg-surface"
+                placeholder="Organization"
+                type="text"
+              />
+            </div>
+            <select
+              class="w-full px-md py-sm border border-outline-variant rounded-lg focus:border-secondary outline-none bg-surface"
+            >
+              <option>Student ID Cards</option>
+              <option>Smart Cards</option>
+              <option>Lanyards</option>
+            </select>
+            <textarea
+              class="w-full px-md py-sm border border-outline-variant rounded-lg focus:border-secondary outline-none bg-surface"
+              placeholder="Your Message..."
+              rows="3"
+            ></textarea>
+            <button
+              class="w-full bg-primary text-on-primary py-md rounded-lg font-bold hover:opacity-90 transition-all shadow-md"
+            >
+              Submit Request
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer
+      class="fabric-texture text-on-primary py-xl border-t border-secondary/30"
+    >
+      <div class="max-w-7xl mx-auto px-margin md:px-xl">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-lg mb-xl">
+          <div class="col-span-1 md:col-span-2">
+            <div class="text-3xl font-bold text-secondary mb-md">
+              ProPrint ID
+            </div>
+            <p class="opacity-80 max-w-sm">
+              Premium institutional identification solutions. Setting the gold
+              standard in printing since 2009.
+            </p>
+          </div>
+          <div>
+            <h4 class="font-bold text-secondary mb-md">Quick Links</h4>
+            <ul class="space-y-sm opacity-80 text-sm">
+              <li class="">
+                <a class="hover:text-secondary transition-colors" href="#"
+                  >Services</a
+                >
+              </li>
+              <li class="">
+                <a class="hover:text-secondary transition-colors" href="#"
+                  >Bulk Orders</a
+                >
+              </li>
+              <li class="">
+                <a class="hover:text-secondary transition-colors" href="#"
+                  >About Us</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="font-bold text-secondary mb-md">Newsletter</h4>
+            <div class="flex gap-xs">
+              <input
+                class="bg-white/10 border-none px-md py-sm rounded-lg text-white outline-none flex-1 placeholder:text-white/50 text-sm"
+                placeholder="Email"
+                type="text"
+              />
+              <button
+                class="bg-secondary text-on-surface px-md rounded-lg flex items-center justify-center"
+              >
+                <span class="material-symbols-outlined">send</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div
+          class="pt-lg border-t border-white/10 text-center text-xs opacity-60"
+        >
+          © 2024 ProPrint ID Solutions. Stitched with Quality.
+        </div>
+      </div>
+    </footer>
+    <!-- Floating Actions -->
+    <div class="fixed bottom-md right-md flex flex-col gap-sm z-50">
+      <a
+        class="w-14 h-14 bg-white text-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform border border-outline-variant"
+        href="tel:+919876543210"
+      >
+        <span class="material-symbols-outlined">call</span>
+      </a>
+      <a
+        class="w-14 h-14 bg-[#25D366] text-white rounded-full shadow-2xl flex items-center justify-center hover:scale-110 transition-transform"
+        href="#"
+      >
+        <span
+          class="material-symbols-outlined"
+          style="font-variation-settings: &quot;FILL&quot; 1"
+          >chat</span
+        >
+      </a>
+    </div>
+    <script>
+      // Intersection Observer for Reveal Animations
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("active");
+            }
+          });
+        },
+        { threshold: 0.1 },
+      );
+
+      document
+        .querySelectorAll(".reveal")
+        .forEach((el) => observer.observe(el));
+
+      // Simple script to handle banner infinite loop logic if needed,
+      // though CSS animation handles most of it.
+    </script>
+  </body>
+</html>
