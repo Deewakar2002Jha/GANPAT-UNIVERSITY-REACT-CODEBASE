@@ -3,6 +3,7 @@ import Button from './Components/Button'
 import Studentscard from './Components/Studentscard'
 import InstagramCard from './Components/InstagramCard'
 import NetflixSeries from './Components/NetflixCard'
+import StudentIDCard from "./Components/Mayuri/StudentIDCard";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
       <Studentscard name="mohit" rollno="21" degree="bca" />
       {/* <InstagramCard /> */}
       {/* <NetflixSeries /> */}
+       <StudentIDCard />
 
     </>
   )
