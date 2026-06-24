@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Studentscard = () => {
+const Studentscard = (aloo) => {
     return (
         <div className="w-80 bg-white rounded-[10px] shadow-lg p-6 m-5">
             <div className="flex justify-center ">
@@ -13,15 +13,15 @@ const Studentscard = () => {
 
             <div className="mt-4 text-left">
                 <h2 className="text-3xl font-bold text-gray-800">
-                    John Doe
+                    {aloo.name}
                 </h2>
 
                 <p className="mt-2 text-gray-600">
-                    <span className="font-semibold">Roll No:</span> 101
+                    <span className="font-semibold">Roll No:</span> {aloo.rollno}
                 </p>
 
                 <p className="text-gray-600">
-                    <span className="font-semibold">Degree:</span> Bachelor of Computer Applications (BCA)
+                    <span className="font-semibold">Degree:</span> {aloo.degree}
                 </p>
             </div>
         </div>

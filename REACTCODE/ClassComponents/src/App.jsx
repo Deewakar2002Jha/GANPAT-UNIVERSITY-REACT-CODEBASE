@@ -7,11 +7,14 @@ import NetflixSeries from './Components/NetflixCard'
 const App = () => {
   return (
     <>
+      {/* <Button text="Buy Now" /> */}
+      {/* <Button text="Add to Cart" /> */}
+
+
       {/* <Button /> */}
-      {/* <Button /> */}
-      {/* <Studentscard /> */}
+      <Studentscard name="mohit" rollno="21" degree="bca" />
       {/* <InstagramCard /> */}
-      <NetflixSeries />
+      {/* <NetflixSeries /> */}
 
     </>
   )

@@ -11,31 +11,31 @@ const SeriesCard = (props) => {
         , watch_url } = props.data
     return (
         <li
-            className='bg-red-400 rounded-xl p-4 w-72 shadow-lg'
+            className='  p-0 w-72 shadow-2xl '
         >
             <div>
                 <img
                     src={img_url}
                     alt={name}
-                    className='w-full h-48 object-cover rounded-lg'
+                    className='w-full h-48 object-cover '
                 />
             </div>
 
-            <h2 className='font-bold text-lg mt-2'>
+            <h2 className='font-bold text-lg mt-2 p-2 ml-2'>
                 {name}
             </h2>
 
             <h3>⭐ {rating}</h3>
 
-            <p className='text-sm mt-1'>
+            <p className='text-sm mt-1 ml-2'>
                 {description}
             </p>
 
-            <p className='mt-1'>
+            <p className='mt-1 ml-2'>
                 <strong>Genre:</strong> {genre.join(", ")}
             </p>
 
-            <p className='mt-1'>
+            <p className='mt-1 ml-2'>
                 <strong>Cast:</strong> {cast.join(", ")}
             </p>
 
@@ -44,7 +44,7 @@ const SeriesCard = (props) => {
                 target="_blank"
                 rel="noopener noreferrer"
             >
-                <button className='mt-3 bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800'>
+                <button className='mt-3 bg-black text-white px-4 py-2  hover:bg-gray-800 mb-4 ml-4'>
                     Watch Now
                 </button>
             </a>
