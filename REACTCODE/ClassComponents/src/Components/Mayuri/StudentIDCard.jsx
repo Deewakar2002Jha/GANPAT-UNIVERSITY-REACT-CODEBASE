@@ -43,7 +43,7 @@ function StudentIDCard() {
 
           <BloodGroup bloodGroup="O+" />
 
-          <MobileInfo mobile="9414425401" />
+          <MobileInfo mobile="7357475401" />
 
           <HostelInfo hostel="BLOCK - A " />
 
