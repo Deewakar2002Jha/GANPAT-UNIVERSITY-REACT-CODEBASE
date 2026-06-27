@@ -1,6 +1,7 @@
 import React from 'react'
+import Button from './Button'
 
-const Studentscard = (aloo) => {
+const Studentscard = (props) => {
     return (
         <div className="w-80 bg-white rounded-[10px] shadow-lg p-6 m-5">
             <div className="flex justify-center ">
@@ -13,18 +14,20 @@ const Studentscard = (aloo) => {
 
             <div className="mt-4 text-left">
                 <h2 className="text-3xl font-bold text-gray-800">
-                    {aloo.name}
+                    {props.name}
                 </h2>
 
                 <p className="mt-2 text-gray-600">
-                    <span className="font-semibold">Roll No:</span> {aloo.rollno}
+                    <span className="font-semibold">Roll No:</span> {props.rollno}
                 </p>
 
                 <p className="text-gray-600">
-                    <span className="font-semibold">Degree:</span> {aloo.degree}
+                    <span className="font-semibold">Degree:</span> {props.degree}
                 </p>
             </div>
+            <Button text="Add to Cart" />
         </div>
+
     )
 }
 
