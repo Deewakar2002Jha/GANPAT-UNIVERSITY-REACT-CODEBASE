@@ -1,0 +1,136 @@
+<MainCard name="Mayuri Kumari"
+        enrollment="22012021001"
+        college="AMPICS"
+        course="BCA HONS"
+        bloodGroup="B+"
+        mobile="1212122221"
+        hostel="A" />
+
+const students = [
+  {
+    id: 1,
+    logo,
+    photo,
+    name: "Mayuri Kumari",
+    enrollment: "22012021001",
+    college: "U. V. Patel College of Engineering",
+    course: "B.Tech Computer Engineering",
+    bloodGroup: "B+",
+    mobile: "9876543210",
+    hostel: "A-101",
+  },
+  {
+    id: 2,
+    logo,
+    photo,
+    name: "Rahul Kumar",
+    enrollment: "22012021002",
+    college: "U. V. Patel College of Engineering",
+    course: "B.Tech IT",
+    bloodGroup: "O+",
+    mobile: "9876543211",
+    hostel: "B-205",
+  },
+  {
+    id: 3,
+    logo,
+    photo,
+    name: "Priya Sharma",
+    enrollment: "22012021003",
+    college: "U. V. Patel College of Engineering",
+    course: "B.Tech AI",
+    bloodGroup: "A+",
+    mobile: "9876543212",
+    hostel: "C-108",
+  },
+];
+
+import React from 'react'
+// import { Button, Button1, Button2 } from './Components/Button'
+import Button from './Components/Button'
+import MainCard from './MapFuncation/Maincard/MainCard'
+
+const students = [
+  {
+    id: 1,
+    logo: "https://portal.ganpatuniversity.ac.in/web/image/website/1/logo?unique=8c6ec10",
+    photo: "https://images.unsplash.com/photo-1782233941435-7d4c3cdac42a?q=80&w=760&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "Mayuri Kumari",
+    enrollment: "22012021001",
+    college: "AMPICS",
+    course: "BCA Hons",
+    bloodGroup: "B+",
+    mobile: "9876543210",
+    hostel: "A-101",
+  },
+  {
+    id: 2,
+    logo: "https://portal.ganpatuniversity.ac.in/web/image/website/1/logo?unique=8c6ec10",
+    photo: "https://images.unsplash.com/photo-1781287602788-64351c769dbd?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "Rahul Kumar",
+    enrollment: "22012021002",
+    college: "AMPICS",
+    course: "BCA Hons",
+    bloodGroup: "O+",
+    mobile: "9876543211",
+    hostel: "B-205",
+  },
+  {
+    id: 3,
+    logo: "https://portal.ganpatuniversity.ac.in/web/image/website/1/logo?unique=8c6ec10",
+    photo: "https://plus.unsplash.com/premium_photo-1666184127688-ed05d3fd3af4?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+    name: "Priya Sharma",
+    enrollment: "22012021003",
+    college: "AMPICS",
+    course: "BCA Hons",
+    bloodGroup: "A+",
+    mobile: "9876543212",
+    hostel: "C-108",
+  },
+];
+
+
+const App = () => {
+  return (
+    <>
+      {/* <Button text="Add to Cart" /> */}
+
+      {/* <Button1 text="Buy Now" />
+      <Button2 text="Subscribe" /> */}
+      {/*MAIN COMPUNENTS START*/}
+      <div className="flex flex-wrap justify-center gap-6 p-6">
+        {students.map((student) => (
+          <MainCard
+            key={student.id}
+            logo={student.logo}
+            photo={student.photo}
+            name={student.name}
+            enrollment={student.enrollment}
+            college={student.college}
+            course={student.course}
+            bloodGroup={student.bloodGroup}
+            mobile={student.mobile}
+            hostel={student.hostel}
+          />
+        ))}
+      </div>
+      {/*MAIN COMPUNENTS ENDS*/}
+
+
+
+
+    </>
+  )
+}
+
+export default App
+
+<MainCard
+        name="Mayuri Kumari"
+        enrollment="200510107001"
+        college="Ganpat University"
+        course="BCA Hons"
+        bloodGroup="O+"
+        mobile="9999999999"
+        hostel="Yes"
+      />
