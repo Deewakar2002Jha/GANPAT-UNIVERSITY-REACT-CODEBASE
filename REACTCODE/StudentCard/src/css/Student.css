@@ -1,0 +1,83 @@
+.student-card {
+    margin-top: 2vw;
+    font-family: "Inter", sans-serif;
+    width: 21vw;
+    height: 33vw;
+    background-color: #ffffff;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px, rgb(51, 51, 51) 0px 0px 0px 3px;
+    display: flex;
+    justify-content: center;
+    border-radius: 0.5vw;
+}
+
+.student-txt {
+    border-radius: 0.5vw 0px 0px 0.5vw;
+    width: 20%;
+    background-color: #DC2324;
+}
+
+.student-txt p {
+    font-weight: 500;
+    transform: rotate(-90deg);
+    font-size: 2vw; 
+    color: #ffffff;
+    margin-top: 27vw;
+    letter-spacing: 1vw;
+}
+
+.student-info {
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1vw;
+}
+
+.college, .b-group, .mobile, .validity {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.college p:nth-child(1),.b-group p:nth-child(1), .mobile p:nth-child(1), .validity p:nth-child(1){
+   width: 5vw;
+}
+
+.student-name-no {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5vw;
+}
+
+.student-name {
+    font-size: 1.2vw;
+    color: #DC2324;
+}
+
+.student-eno {
+    font-size: 0.95vw;
+}
+
+.student-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15vw;
+    font-size: 0.95vw;
+}
+
+.student-info .logo img{
+    width: 9vw;
+}
+
+.student-photo img {
+    width: 6vw;
+    border-radius: 10px;
+    padding: 1px;
+    outline: 2px solid #DC2324;
+}
+
+.barcode img {
+    width: 15vw;
+    height: 1.5vw;
+}

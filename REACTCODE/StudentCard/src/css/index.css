@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(0, 0, 0, 0.9)), url('https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExZG54b244MHF1dG9wNXkwaWVmamx6M3RrMHJiNGUzcWN1eWsyZnpveCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aQEhDxymghOREfhqgA/giphy.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
