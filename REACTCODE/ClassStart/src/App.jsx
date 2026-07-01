@@ -1,13 +1,12 @@
-import React from 'react'
+import React from "react";
+import StudentIDCard from "./assets/Studentidcard";
 
-const App = () => {
+function App() {
   return (
-    <div className="p-10 space-y-4 text-blue-500">
-      <h1 className="text-6xl font-bold">Hello, my name is Mitika</h1>
-      <p className="text-4xl">Degree: Bachelor of Computer Applications (BCA)</p>
-      <p className="text-4xl">Roll No: 24032211191</p>
+    <div>
+      <StudentIDCard />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
