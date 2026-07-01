@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import StudentIDCard from "./assets/Studentidcard";
 
-const App = () => {
+function App() {
   return (
-    <div className="text-8xl text-blue-500">
-      hello my name is Deewakar and i am learing react and tailwindcss with vite
+    <div>
+      <StudentIDCard />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
